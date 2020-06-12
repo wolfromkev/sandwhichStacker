@@ -66,9 +66,7 @@ export const fetchOrder = (token, localId) => {
 		const queryParams =
 			'?auth=' + token + '&orderBy="localId"&equalTo="' + localId + '"';
 		axios
-			.get(
-				'https://react-my-burger-8dd2b.firebaseio.com/orders.json' + queryParams
-			)
+			.get('https://sandwhichstacker.firebaseio.com/orders.json' + queryParams)
 			.then((res) => {
 				const fetchedOrders = [];
 				for (let key in res.data) {

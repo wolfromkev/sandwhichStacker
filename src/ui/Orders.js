@@ -48,56 +48,31 @@ class Orders extends Component {
 		const { orders } = this.props;
 
 		let orderList = orders.map((order, index) => {
-			if (index === 0) {
-				return (
-					<div className={classes.Order}>
-						<p>
-							<strong className={classes.orderDate}>Most Recent</strong>
-						</p>
-						<p>
-							<strong>{order.orderDate} </strong>
-						</p>
-						<p>
-							{' '}
-							<strong>Ingredients: </strong>
-							<span>Bacon: {order.ingredients.bacon} </span>
-							<span>Cheese: {order.ingredients.cheese} </span>
-							<span> Meat: {order.ingredients.meat}</span>
-							<span> Lettuce: {order.ingredients.salad}</span>
-						</p>
-						<p>
-							<strong> Price: </strong>$
-							{Number.parseFloat(order.price).toFixed(2)}
-						</p>
-					</div>
-				);
-			} else {
-				return (
-					<div className={classes.Order}>
-						<p>
-							<strong>{order.orderDate} </strong>
-						</p>
-						<p>
-							{' '}
-							<strong>Ingredients: </strong>
-							<span>Bacon: {order.ingredients.bacon} </span>
-							<span>Cheese: {order.ingredients.cheese} </span>
-							<span> Meat: {order.ingredients.meat}</span>
-							<span> Lettuce: {order.ingredients.salad}</span>
-						</p>
-						<p>
-							<strong> Price: </strong>$
-							{Number.parseFloat(order.price).toFixed(2)}
-						</p>
-					</div>
-				);
-			}
+			return (
+				<div className={classes.Order}>
+					<p>
+						<strong>{order.orderDate} </strong>
+					</p>
+					<p>
+						{' '}
+						<strong>Ingredients: </strong>
+						<span>Bacon: {order.ingredients.bacon} </span>
+						<span>Cheese: {order.ingredients.cheese} </span>
+						<span> Meat: {order.ingredients.meat}</span>
+						<span> Lettuce: {order.ingredients.salad}</span>
+					</p>
+					<p>
+						<strong> Price: </strong>$
+						{Number.parseFloat(order.price).toFixed(2)}
+					</p>
+				</div>
+			);
 		});
 
 		return (
 			<div className={classes.mainDiv}>
 				<h1 className={classes.title}> Orders:</h1>
-				<div className={classes.ordersDiv}> {orderList}</div>
+				<div className={classes.ordersDiv}> {orderList.reverse()}</div>
 			</div>
 		);
 	}
