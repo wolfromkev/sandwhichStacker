@@ -6,16 +6,19 @@ import { connect } from 'react-redux';
 class Burger extends Component {
 	render() {
 		const { ings } = this.props;
+		let transformedIngredients;
 
-		let transformedIngredients = Object.keys(ings)
-			.map((igKey) => {
-				return [...Array(ings[igKey])].map((_, i) => {
-					return <BurgerIngredient key={igKey + i} type={igKey} />;
-				});
-			})
-			.reduce((arr, el) => {
-				return arr.concat(el);
-			}, []);
+		if (ings) {
+			transformedIngredients = Object.keys(ings)
+				.map((igKey) => {
+					return [...Array(ings[igKey])].map((_, i) => {
+						return <BurgerIngredient key={igKey + i} type={igKey} />;
+					});
+				})
+				.reduce((arr, el) => {
+					return arr.concat(el);
+				}, []);
+		}
 
 		return (
 			<div className={classes.Burger}>

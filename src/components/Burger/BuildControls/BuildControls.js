@@ -26,7 +26,7 @@ const BuildControls = (props) => (
 
 		<button
 			className={classes.OrderButton}
-			disabled={props.ings}
+			disabled={props.price < 1.1}
 			onClick={props.purchased}
 		>
 			{' '}

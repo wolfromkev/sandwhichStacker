@@ -38,9 +38,9 @@ class SandwhichStacker extends Component {
 	};
 
 	render() {
-		const { classes, isAuthenticated } = this.props;
+		const { classes, isAuthenticated, ings } = this.props;
 		const disabledInfo = {
-			...this.props.ings,
+			...ings,
 		};
 
 		for (let key in disabledInfo) {
@@ -69,6 +69,7 @@ class SandwhichStacker extends Component {
 						ingredientAdded={this.props.onIngredientAdded}
 						ingredientRemoved={this.props.onIngredientRemove}
 						disabled={disabledInfo}
+						ings={ings}
 						price={this.props.price}
 						purchased={this.purchaseHandler}
 					/>
