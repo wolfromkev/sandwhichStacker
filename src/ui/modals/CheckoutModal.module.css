@@ -1,0 +1,88 @@
+.Modal {
+	position: absolute;
+	z-index: 500;
+	border: 1px solid #fe6b8b;
+	padding: 16px;
+	top: 30%;
+	transition: all 0.3s ease-out;
+	color: #ff8e53;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.buttonContainer {
+	height: 100%;
+	margin-top: 1rem;
+}
+
+.cancelButton {
+	margin-right: 4rem;
+	background-color: #fe6b8b;
+	color: white;
+	font: inherit;
+	padding: 5px;
+	margin: 0 5px;
+	width: 80px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	border-radius: 3px;
+	box-shadow: 0 2px 2px 2px rgba(255, 105, 135, 0.3);
+}
+
+.continueButton {
+	right: 2rem;
+	margin-right: 4rem;
+	background-color: #ff8e53;
+	color: white;
+	font: inherit;
+	padding: 5px;
+	margin: 0 5px;
+	width: 80px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	border-radius: 3px;
+	box-shadow: 0 2px 2px 2px rgba(255, 105, 135, 0.3);
+}
+
+.cancelButton:hover,
+.cancelButton:active {
+	background-color: #ff4d73;
+	color: white;
+	transform: translateY(-2px);
+}
+
+.continueButton:hover,
+.continueButton:active {
+	background-color: #ff782f;
+	color: white;
+	transform: translateY(-2px);
+}
+
+.OrderInfo {
+	width: 85%;
+	border: 1px solid #fe6b8b;
+	box-shadow: 0 2px 3px #fe6b8b;
+	padding: 10px;
+	margin: 10px auto;
+	box-sizing: border-box;
+}
+
+.horizontalLine {
+	color: #fe6b8b;
+	width: 15rem;
+}
+
+.Span {
+	text-transform: capitalize;
+	display: inline-block;
+	margin: 0 8px;
+}
+
+@media (min-width: 600px) {
+	.Modal {
+		width: 500px;
+		left: calc(50% - 250px);
+	}
+}

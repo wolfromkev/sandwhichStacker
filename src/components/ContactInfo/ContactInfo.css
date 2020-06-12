@@ -1,0 +1,91 @@
+.ContactData {
+	margin: 2rem auto;
+	width: 100%;
+	text-align: center;
+	box-shadow: 0 2px 3px #ff8e53;
+	border: 1px solid #ff8e53;
+	padding: 1rem;
+	box-sizing: border-box;
+}
+
+.horizontalLine {
+	color: #fe6b8b;
+	width: 15rem;
+}
+
+.Input {
+	display: block;
+}
+
+.errorMsg {
+	color: #fe6b8b;
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+.Title {
+	color: #fe6b8b;
+}
+
+.progress {
+	position: absolute;
+}
+.formContainer {
+	z-index: 100;
+	padding-top: 15rem;
+	opacity: 1;
+}
+
+.textField {
+	color: #fe6b8b;
+}
+
+.buttonContainer {
+	height: 100%;
+	margin-top: 1rem;
+}
+
+.cancelButton {
+	margin-right: 4rem;
+	background-color: #fe6b8b;
+	color: white;
+	font: inherit;
+	padding: 5px;
+	margin: 0 5px;
+	width: 80px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	border-radius: 3px;
+	box-shadow: 0 2px 2px 2px rgba(255, 105, 135, 0.3);
+}
+
+.continueButton {
+	right: 2rem;
+	margin-right: 4rem;
+	background-color: #ff8e53;
+	color: white;
+	font: inherit;
+	padding: 5px;
+	margin: 0 5px;
+	width: 80px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	border-radius: 3px;
+	box-shadow: 0 2px 2px 2px rgba(255, 105, 135, 0.3);
+}
+
+.cancelButton:hover,
+.cancelButton:active {
+	background-color: #ff4d73;
+	color: white;
+	transform: translateY(-2px);
+}
+
+.continueButton:hover,
+.continueButton:active {
+	background-color: #ff782f;
+	color: white;
+	transform: translateY(-2px);
+}
