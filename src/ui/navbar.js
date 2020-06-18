@@ -55,6 +55,7 @@ class Navbar extends Component {
 					toolTip='Logout'
 					onClick={this.props.onLogout}
 					toolClassName={classes.button}
+					url='/join'
 				>
 					<FiLogOut> </FiLogOut>
 				</MyButton>

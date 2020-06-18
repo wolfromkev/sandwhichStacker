@@ -224,7 +224,6 @@ class LoginSignup extends Component {
 							value={this.state.email}
 							onChange={this.handleChange}
 							fullWidth
-							color='#FE6B8B'
 						></TextField>
 						<TextField
 							id='password'

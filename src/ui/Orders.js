@@ -49,7 +49,7 @@ class Orders extends Component {
 
 		let orderList = orders.map((order, index) => {
 			return (
-				<div className={classes.Order}>
+				<div className={classes.Order} key={index}>
 					<p>
 						<strong>{order.orderDate} </strong>
 					</p>
